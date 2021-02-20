@@ -1,4 +1,4 @@
-// Biodiversity
+// 3D Skeleton
 
 var body = document.body
 var help = document.getElementById('help')
@@ -14,7 +14,6 @@ function toggleTheme() {
     cube.material.color.setHex(
         HEXToVBColor(getComputedStyle(body).getPropertyValue('--el'))
     )
-
 }
 
 function helpMenu() {
