@@ -5,7 +5,7 @@ var help = document.getElementById('help')
 
 function HEXToVBColor(hex) {
     return parseInt(
-        '0x' + hex.substr(2, 3) + hex.substr(2 + 3 * (v.length > 5), 3),
+        '0x' + hex.substr(2, 3) + hex.substr(2 + 3 * (hex.length > 5), 3),
         16)
 }
 
