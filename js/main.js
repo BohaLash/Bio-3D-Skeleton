@@ -38,8 +38,6 @@ camera.position.z = 5;
 
 renderer.render(scene, camera);
 
-console.log(cube)
-
 const animate = function () {
     requestAnimationFrame(animate);
 
