@@ -38,13 +38,25 @@ camera.position.z = 5;
 
 renderer.render(scene, camera);
 
-const animate = function () {
-    requestAnimationFrame(animate);
+// const animate = function () {
+//     requestAnimationFrame(animate);
 
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+//     cube.rotation.x += 0.01;
+//     cube.rotation.y += 0.01;
 
-    renderer.render(scene, camera);
-};
+//     renderer.render(scene, camera);
+// };
 
-animate();
+// animate();
+
+const gltfLoader = new THREE.GLTFLoader();
+
+gltfLoader.load('./obj/skeleton.glb', function (gltf) {
+    console.log(gltf.scene)
+    scene.add(gltf.scene);
+
+}, undefined, function (error) {
+
+    console.error(error);
+
+});
