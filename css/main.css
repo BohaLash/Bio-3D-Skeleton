@@ -1,0 +1,78 @@
+/* Biodiversity */
+
+@font-face {
+  font-family: PressStart;
+  src: url(../fonts/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+:root {
+    --accent: #e48297;
+}
+
+@media (prefers-color-scheme: light) {
+    .th1 {
+        --bg: #fff;
+        --shadow: #333;
+        --blocks: #fff;
+        --el: #000;
+    }
+    .th2 {
+        --bg: #111;
+        --shadow: #000;
+        --blocks: #222;
+        --el: #fff;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .th1 {
+        --bg: #111;
+        --shadow: #000;
+        --blocks: #222;
+        --el: #fff;
+    }
+    .th2 {
+        --bg: #fff;
+        --shadow: #333;
+        --blocks: #fff;
+        --el: #000;
+    }
+}
+
+::selection {
+    color: var(--el);
+    background: var(--accent);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    background: var(--bg);
+    color: var(--el);
+}
+
+button {
+    background: var(--blocks);
+    color: var(--el);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+#help {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+    background: var(--blocks);
+}
