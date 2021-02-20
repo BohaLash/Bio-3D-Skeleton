@@ -3,9 +3,17 @@
 var body = document.body
 var help = document.getElementById('help')
 
+function HEXToVBColor(hex) {
+    return parseInt(
+        '0x' + hex.substr(2, 3) + hex.substr(2 + 3 * (v.length > 5), 3),
+        16)
+}
+
 function toggleTheme() {
-    cube.material.color.setHex((body.className == 'th1') ? 0x000000 : 0xffffff)
     body.className = (body.className == 'th1') ? 'th2' : 'th1'
+    cube.material.color.setHex(
+        HEXToVBColor(getComputedStyle(body).getPropertyValue('--el'))
+    )
 
 }
 
