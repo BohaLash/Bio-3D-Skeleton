@@ -4,6 +4,7 @@ var body = document.body
 var help = document.getElementById('help')
 
 function HEXToVBColor(hex) {
+    9
     return parseInt(
         '0x' + hex.substr(2, 3) + hex.substr(2 + 3 * (hex.length > 5), 3),
         16)
@@ -38,25 +39,31 @@ camera.position.z = 5;
 
 renderer.render(scene, camera);
 
-// const animate = function () {
-//     requestAnimationFrame(animate);
+const animate = function () {
+    requestAnimationFrame(animate);
 
-//     cube.rotation.x += 0.01;
-//     cube.rotation.y += 0.01;
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
 
-//     renderer.render(scene, camera);
-// };
+    renderer.render(scene, camera);
+};
 
-// animate();
+animate();
 
 const gltfLoader = new THREE.GLTFLoader();
 
-gltfLoader.load('./obj/skeleton.glb', function (gltf) {
-    console.log(gltf.scene)
-    scene.add(gltf.scene);
+function loadModel() {
+    gltfLoader.load('./obj/skeleton.glb', function (gltf) {
 
-}, undefined, function (error) {
+        console.log(gltf.scene)
+        scene.add(gltf.scene);
 
-    console.error(error);
+    }, undefined, function (error) {
 
-});
+        console.error(error);
+
+    });
+
+}
+
+loadModel();
