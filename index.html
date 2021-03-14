@@ -12,6 +12,8 @@
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 </head>
 
 <body class="th1">
@@ -26,16 +28,19 @@
     </section>
 
     <footer>
-        <button onclick="toggleTheme()" id="theme">Тема</button>
-        <button onclick="helpMenu()" id="theme">Підказки</button>
+        <button id="theme_button">Тема</button>
+        <button id="help_button">Підказки</button>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
         integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow=="
         crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+    <script type="module"
+        src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/jsm/controls/OrbitControls.js"></script>
+
     <!-- <script src="js/three.js"></script> -->
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
